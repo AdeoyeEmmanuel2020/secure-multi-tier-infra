@@ -564,7 +564,7 @@ terraform apply tfplan
 Cloud Infrastructure Engineer | AWS | Terraform | Security
 
 [GitHub](https://github.com/AdeoyeEmmanuel2020) ·
-[LinkedIn](www.linkedin.com/in/emmanuel-adeoye-29187bb7)
+[LinkedIn](www.linkedin.com/in/emmanuel-adeoye-29187bb7/)
 
 ---
 
