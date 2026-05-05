@@ -155,9 +155,76 @@ level regardless of application code.
 ---
 
 ## Project Structure
-secure-multi-tier-infra/ │ ├── providers.tf # AWS provider config + Terraform version constraint ├── main.tf # Root module — orchestrates all child modules ├── variables.tf # All input variable definitions with descriptions ├── outputs.tf # Key resource identifiers exposed after apply ├── terraform.tfvars # Your environment-specific variable values ├── .gitignore # Excludes state files, lock files, credentials ├── README.md # This file │ ├── screenshots/ # Evidence screenshots for portfolio │ ├── 01-terraform-apply-complete.png │ ├── 02-vpc-overview.png │ ├── 03-six-subnets.png │ ├── 04-public-route-table.png │ ├── 05-private-route-table.png │ ├── 06-database-route-table.png │ ├── 07-three-nacls.png │ ├── 08-nacl-database-rules.png │ ├── 09-sg-chaining-app.png │ ├── 10-sg-chaining-db.png │ ├── 11-asg-details.png │ ├── 12-asg-instances-inservice.png │ ├── 13-alb-live-webpage.png │ ├── 14-ssm-fleet-manager-online.png │ ├── 15-ssm-session-terminal.png │ ├── 16-cloudwatch-four-alarms.png │ ├── 17-cloudtrail-trail.png │ ├── 18-vpc-flow-logs-streams.png │ ├── 19-imdsv2-enforced.png │ └── 20-ebs-volume-encrypted.png │ └── modules/ ├── vpc/ # VPC, 6 subnets, IGW, NAT, 3 route tables, flow logs │ ├── main.tf │ ├── variables.tf │ └── outputs.tf ├── security_groups/ # ALB, App, DB, Endpoint SGs with chaining │ ├── main.tf │ ├── variables.tf │ └── outputs.tf ├── nacl/ # Public, Private, Database NACLs │ ├── main.tf │ ├── variables.tf │ └── outputs.tf ├── iam/ # EC2 IAM role + instance profile for SSM │ ├── main.tf │ ├── variables.tf │ └── outputs.tf ├── endpoints/ # VPC Interface Endpoints for SSM private access │ ├── main.tf │ ├── variables.tf │ └── outputs.tf ├── alb/ # Application Load Balancer, Target Group, Listener │ ├── main.tf │ ├── variables.tf │ └── outputs.tf ├── compute/ # Launch Template + Auto Scaling Group + scaling policy │ ├── main.tf │ ├── variables.tf │ └── outputs.tf ├── guardduty/ # GuardDuty stub (requires account subscription) │ ├── main.tf │ ├── variables.tf │ └── outputs.tf └── monitoring/ # CloudWatch Alarms, CloudTrail, S3 audit bucket, SNS ├── main.tf ├── variables.tf └── outputs.tf
----
-
+" secure-multi-tier-infra/
+│
+├── providers.tf               # AWS provider config + Terraform version constraint
+├── main.tf                    # Root module — orchestrates all child modules
+├── variables.tf               # All input variable definitions with descriptions
+├── outputs.tf                 # Key resource identifiers exposed after apply
+├── terraform.tfvars           # Your environment-specific variable values
+├── .gitignore                 # Excludes state files, lock files, credentials
+├── README.md                  # This file
+│
+├── screenshots/               # Evidence screenshots for portfolio
+│   ├── 01-terraform-apply-complete.png
+│   ├── 02-vpc-overview.png
+│   ├── 03-six-subnets.png
+│   ├── 04-public-route-table.png
+│   ├── 05-private-route-table.png
+│   ├── 06-database-route-table.png
+│   ├── 07-three-nacls.png
+│   ├── 08-nacl-database-rules.png
+│   ├── 09-sg-chaining-app.png
+│   ├── 10-sg-chaining-db.png
+│   ├── 11-asg-details.png
+│   ├── 12-asg-instances-inservice.png
+│   ├── 13-alb-live-webpage.png
+│   ├── 14-ssm-fleet-manager-online.png
+│   ├── 15-ssm-session-terminal.png
+│   ├── 16-cloudwatch-four-alarms.png
+│   ├── 17-cloudtrail-trail.png
+│   ├── 18-vpc-flow-logs-streams.png
+│   ├── 19-imdsv2-enforced.png
+│   └── 20-ebs-volume-encrypted.png
+│
+└── modules/
+├── vpc/                   # VPC, 6 subnets, IGW, NAT, 3 route tables, flow logs
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+├── security_groups/       # ALB, App, DB, Endpoint SGs with chaining
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+├── nacl/                  # Public, Private, Database NACLs
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+├── iam/                   # EC2 IAM role + instance profile for SSM
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+├── endpoints/             # VPC Interface Endpoints for SSM private access
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+├── alb/                   # Application Load Balancer, Target Group, Listener
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+├── compute/               # Launch Template + Auto Scaling Group + scaling policy
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+├── guardduty/             # GuardDuty stub (requires account subscription)
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+└── monitoring/            # CloudWatch Alarms, CloudTrail, S3 audit bucket, SNS
+├── main.tf
+├── variables.tf
+└── outputs.tf
+"
 ## Prerequisites
 
 | Tool | Minimum Version | Installation |
