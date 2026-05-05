@@ -1,4 +1,4 @@
-# 🔐 Secure Multi-Tier Auto-Scaling Infrastructure on AWS
+# Secure Multi-Tier Auto-Scaling Infrastructure on AWS
 
 > A production-grade, defence-in-depth 3-tier cloud architecture built entirely with Terraform.
 > Demonstrates advanced AWS security engineering across networking, compute hardening,
@@ -13,7 +13,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [About This Project](#about-this-project)
 - [Architecture](#architecture)
@@ -25,8 +25,8 @@
 - [Module Documentation](#module-documentation)
 - [Compliance Alignment](#compliance-alignment)
 - [Deployed Infrastructure — Live Resource IDs](#deployed-infrastructure--live-resource-ids)
-- [📸 Terminal Evidence — CLI](#-terminal-evidence--cli)
-- [📸 AWS Console Evidence](#-aws-console-evidence)
+- [Terminal Evidence — CLI](#-terminal-evidence--cli)
+- [AWS Console Evidence](#-aws-console-evidence)
 - [Destroy Infrastructure](#destroy-infrastructure)
 - [Enabling GuardDuty and Security Hub](#enabling-guardduty-and-security-hub)
 - [Contributing](#contributing)
@@ -321,7 +321,7 @@ alb_dns_name = "secure-infra-alb-1084472511.us-east-1.elb.amazonaws.com" asg_nam
 
 ---
 
-## 📸 Terminal Evidence — CLI
+## Terminal Evidence — CLI
 
 ### 01 — Terraform Apply Complete
 ![01-terraform-apply-complete](screenshots/01-terraform-apply-complete.png)
@@ -330,7 +330,7 @@ alb_dns_name = "secure-infra-alb-1084472511.us-east-1.elb.amazonaws.com" asg_nam
 
 ---
 
-## 📸 AWS Console Evidence
+## AWS Console Evidence
 
 ### 02 — VPC Overview
 ![02-vpc-overview](screenshots/02-vpc-overview.png)
