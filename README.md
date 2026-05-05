@@ -5,12 +5,14 @@
 > identity, auditing, threat response, and operational observability.
 
 ![Terraform](https://img.shields.io/badge/Terraform-v1.5%2B-7B42BC?logo=terraform&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazonaws&logoColor=white)
-![Security](https://img.shields.io/badge/Security-Defence--in--Depth-3fb950?logo=shieldsdotio&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazon-aws&logoColor=white)
+![Security](https://img.shields.io/badge/Security-Defence--in--Depth-3fb950)
 ![SSM](https://img.shields.io/badge/Access-SSM%20Only%20%7C%20No%20SSH-0075ca)
 ![IaC](https://img.shields.io/badge/IaC-100%25%20Terraform-7B42BC)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
+
+cat /tmp/badges.txt
 ---
 
 ## Table of Contents
