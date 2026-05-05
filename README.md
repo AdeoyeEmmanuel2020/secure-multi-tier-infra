@@ -65,39 +65,8 @@ Auto Scaling Groups, IAM, EBS Encryption, IMDSv2, VPC Interface Endpoints.
 ---
 
 ## Architecture
-INTERNET
-                             │
-                  ┌──────────▼──────────┐
-                  │  Application Load   │
-                  │  Balancer (ALB)     │ ← Public Subnets
-                  │  Port 80 / 443      │   10.0.1.0/24 (AZ-a)
-                  │  SG: alb-sg         │   10.0.2.0/24 (AZ-b)
-                  └──────────┬──────────┘
-                             │
-                SG CHAINING: ALB SG → App SG
-                             │
-                  ┌──────────▼──────────┐
-                  │  EC2 Auto Scaling   │
-                  │  Group (2-6 nodes)  │ ← Private Subnets
-                  │  No public IP       │   10.0.10.0/24 (AZ-a)
-                  │  IMDSv2 enforced    │   10.0.11.0/24 (AZ-b)
-                  │  EBS encrypted      │
-                  │  SSM access only    │
-                  │  SG: app-sg         │
-                  └──────────┬──────────┘
-                             │
-                SG CHAINING: App SG → DB SG
-                             │
-                  ┌──────────▼──────────┐
-                  │  Database Tier      │
-                  │  Port 3306 only     │ ← Database Subnets
-                  │  SG: db-sg          │   10.0.20.0/24 (AZ-a)
-                  │  Zero internet      │   10.0.21.0/24 (AZ-b)
-                  │  route table        │
-                  └─────────────────────┘
-┌────────────────────────────────────────────────────────────────┐ │ SECURITY LAYER │ │ │ │ NACLs (stateless) → Public / Private / Database │ │ VPC Flow Logs → CloudWatch /aws/vpc/flowlogs/* │ │ CloudTrail → S3 (encrypted, versioned, private) │ │ CloudWatch Alarms → CPU high/low, 5XX errors, unhealthy │ │ SNS Notifications → Email alerts for all alarms │ │ VPC Interface Endpoints → SSM, SSMMessages, EC2Messages │ │ IAM Instance Profiles → Least privilege EC2 roles │ └────────────────────────────────────────────────────────────────┘
-ROUTE TABLE DESIGN: ┌─────────────────────────────────────────────────────────┐ │ Public RT │ 0.0.0.0/0 → igw-xxxx (Internet Gateway) │ │ Private RT │ 0.0.0.0/0 → nat-xxxx (NAT Gateway) │ │ Database RT │ local only — NO internet route │ └─────────────────────────────────────────────────────────┘
----
+<img width="700" height="400" alt="secure-multi-tier-infra" src="https://github.com/user-attachments/assets/afd01650-b08c-475a-828e-391c3c1637fa" />
+
 
 ## Architecture Decisions and Rationale
 
