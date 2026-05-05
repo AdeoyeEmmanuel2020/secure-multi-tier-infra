@@ -155,7 +155,8 @@ level regardless of application code.
 ---
 
 ## Project Structure
-" secure-multi-tier-infra/
+```bash
+secure-multi-tier-infra/
 │
 ├── providers.tf               # AWS provider config + Terraform version constraint
 ├── main.tf                    # Root module — orchestrates all child modules
@@ -224,7 +225,8 @@ level regardless of application code.
 ├── main.tf
 ├── variables.tf
 └── outputs.tf
-"
+```
+----
 ## Prerequisites
 
 | Tool | Minimum Version | Installation |
