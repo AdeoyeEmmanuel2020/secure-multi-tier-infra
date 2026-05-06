@@ -558,6 +558,14 @@ terraform apply tfplan
 5. Open a Pull Request
 
 ---
+# Author
+**Adeoye Emmanuel** - AWS Certified Solutions Architect | AWS Security Solutions Architect | DevSecOps Engineer
+
+**Email:** Emmanuelofgrace@gmail.com
+
+ LinkedIn: www.linkedin.com/in/emmanuel-adeoye-29187bb7
+
+ -------
 
 # License
 This project is licensed under the MIT License
@@ -585,10 +593,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
------
-# **👤** Author
-**Adeoye Emmanuel** - AWS Certified Solutions Architect | AWS Security Solutions Architect | DevSecOps Engineer
 
-**Email:** Emmanuelofgrace@gmail.com
-
- LinkedIn: www.linkedin.com/in/emmanuel-adeoye-29187bb7
