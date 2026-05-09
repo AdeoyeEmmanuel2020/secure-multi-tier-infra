@@ -27,7 +27,7 @@
 - [Compliance Alignment](#compliance-alignment)
 - [Deployed Infrastructure — Live Resource IDs](#deployed-infrastructure--live-resource-ids)
 - [Terminal Evidence](#Terminal-Evidence)
-- [AWS Console Evidence](#-aws-console-evidence)
+- [AWS Console Evidence](#aws-console-evidence)
 - [Destroy Infrastructure](#destroy-infrastructure)
 - [Enabling GuardDuty and Security Hub](#enabling-guardduty-and-security-hub)
 - [Contributing](#contributing)
