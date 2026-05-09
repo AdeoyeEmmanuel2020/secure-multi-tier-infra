@@ -11,8 +11,6 @@
 ![IaC](https://img.shields.io/badge/IaC-100%25%20Terraform-7B42BC)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-
-cat /tmp/badges.txt
 ---
 
 ## Table of Contents
