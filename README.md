@@ -11,6 +11,7 @@
 ![IaC](https://img.shields.io/badge/IaC-100%25%20Terraform-7B42BC)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
+
 ---
 
 ## Table of Contents
@@ -25,7 +26,7 @@
 - [Module Documentation](#module-documentation)
 - [Compliance Alignment](#compliance-alignment)
 - [Deployed Infrastructure — Live Resource IDs](#deployed-infrastructure--live-resource-ids)
-- [Terminal Evidence — CLI](#-terminal-evidence--cli)
+- [Terminal Evidence — CLI](#Terminal-Evidence—-CLI)
 - [AWS Console Evidence](#-aws-console-evidence)
 - [Destroy Infrastructure](#destroy-infrastructure)
 - [Enabling GuardDuty and Security Hub](#enabling-guardduty-and-security-hub)
