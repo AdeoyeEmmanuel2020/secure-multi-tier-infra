@@ -26,7 +26,7 @@
 - [Module Documentation](#module-documentation)
 - [Compliance Alignment](#compliance-alignment)
 - [Deployed Infrastructure — Live Resource IDs](#deployed-infrastructure--live-resource-ids)
-- [Terminal Evidence — CLI](#Terminal-Evidence—-CLI)
+- [Terminal Evidence](#Terminal-Evidence)
 - [AWS Console Evidence](#-aws-console-evidence)
 - [Destroy Infrastructure](#destroy-infrastructure)
 - [Enabling GuardDuty and Security Hub](#enabling-guardduty-and-security-hub)
@@ -360,7 +360,7 @@ alb_dns_name = "secure-infra-alb-1084472511.us-east-1.elb.amazonaws.com" asg_nam
 
 ---
 
-## Terminal Evidence — CLI
+## Terminal Evidence
 
 ### 01 — Terraform Apply Complete
 ![01-terraform-apply-complete](screenshots/01-terraform-apply-complete.png)
